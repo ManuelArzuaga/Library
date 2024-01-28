@@ -9,13 +9,14 @@
 </head>
 <body>
   <div class="container">
-    <form onsubmit="addBookToLibrary()">
+    <form onsubmit="addBookToLibrary(event)">
     <input type = "text" id = "libro" >Ingrese nombre libro</input>
     <input type = "text" id = "autor" >Ingrese nombre author</input>
     <input type = "number" id = "paginas" >Ingrese cantidad de paginas</input>
     <input type = "text" id = "leido" >Leido</input>
     <button type = "submit">Press</button>
     </form>
+    <button type ="button" id="mostrar" onclick="showLibrary()">Mostrar</button>
     
   </div>
     

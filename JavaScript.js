@@ -1,4 +1,4 @@
-const mylibray = [];
+const mylibrary = [];
 
 const book = {
 
@@ -20,20 +20,33 @@ const book = {
   }
 }
 
-function addBookToLibrary(){
-  
+function addBookToLibrary(event){
+  event.preventDefault();
   let nameInsert = document.getElementById("libro").value;
   let authorInsert = document.getElementById("autor").value;
   let numberPagesInsert = document.getElementById("paginas").value;
   let leidoInsert = document.getElementById("leido").value;
-  book.createbook(nameInsert,authorInsert,numberPagesInsert,leidoInsert);
-  mylibray.push(book);
-  console.log(mylibray);
-  
+  book.createbook(nameInsert,authorInsert,numberPagesInsert,leidoInsert);;
+  mylibrary.push(book);
 }
 
-addBookToLibrary()
 
+
+function showLibrary(){
+  for(let i=0;i<mylibrary.length;i++){
+    console.log(mylibrary[i]);
+  }
+}
+
+// function eliminarBook(e){
+//   e.preventDefault();
+//   let libroNombre = document.getElementById("eliminar");
+//   for(let i=0; i<mylibrary.length;i++){
+//     if(mylibrary[i].name === libroNombre){
+//       mylibrary.splice(mylibrary[i],1);
+//     }
+//   }
+// }
 
 
 // function show(){ //muestra elemento ingresado por un input
